@@ -1,0 +1,200 @@
+{
+  "plugins": {
+    "allow": [
+      "whatsapp",
+      "discord",
+      "telegram",
+      "slack",
+      "nostr",
+      "googlechat"
+    ],
+    "entries": {
+      "whatsapp": {
+        "enabled": true
+      },
+      "discord": {
+        "enabled": true
+      },
+      "imessage": {
+        "enabled": false
+      },
+      "telegram": {
+        "enabled": true
+      },
+      "slack": {
+        "enabled": true
+      },
+      "nostr": {
+        "enabled": true
+      },
+      "signal": {
+        "enabled": false
+      },
+      "googlechat": {
+        "enabled": true
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "streaming": "partial",
+      "botToken": "8121338922:AAHRT4n6QRGZOeas4XyHX4sw2ec3lkGtxWk",
+      "enabled": true
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-28T06:54:46.459Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-17T23:59:53.285Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "logging": {
+    "redactSensitive": "tools"
+  },
+  "update": {
+    "channel": "stable",
+    "checkOnStart": false
+  },
+  "browser": {
+    "headless": true,
+    "noSandbox": true,
+    "defaultProfile": "openclaw"
+  },
+  "models": {
+    "mode": "merge"
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "claude-cli/claude-sonnet-4-6",
+        "fallbacks": [
+          "anthropic/claude-sonnet-4-6"
+        ]
+      },
+      "models": {
+        "anthropic/claude-opus-4-6": {
+          "alias": "Claude Opus 4.6",
+          "params": {
+            "cacheRetention": "short"
+          }
+        },
+        "anthropic/claude-sonnet-4-6": {
+          "alias": "Claude Sonnet 4.6",
+          "params": {
+            "cacheRetention": "short"
+          }
+        },
+        "anthropic/claude-haiku-4-5": {
+          "alias": "Claude Haiku 4.5",
+          "params": {
+            "cacheRetention": "short"
+          }
+        },
+        "anthropic/Claude Opus 4.6": {
+          "params": {
+            "cacheRetention": "short"
+          }
+        },
+        "claude-cli/claude-sonnet-4-6": {
+          "alias": "Claude Sonnet 4.6 (CLI)"
+        },
+        "claude-cli/claude-opus-4-6": {
+          "alias": "Claude Opus 4.6 (CLI)"
+        },
+        "claude-cli/claude-haiku-4-5": {
+          "alias": "Claude Haiku 4.5 (CLI)"
+        }
+      },
+      "cliBackends": {
+        "claude-cli": {
+          "command": "/data/.npm-global/bin/claude"
+        }
+      },
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "heartbeat": {
+        "every": "30m",
+        "model": "claude-cli/claude-haiku-4-5"
+      },
+      "sandbox": {
+        "mode": "off"
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "name": "main"
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "provider": "brave",
+        "apiKey": "BSACwipxFyEcMKA1vUy_OwMamXHd3FX"
+      }
+    },
+    "hunter": {
+      "apiKey": "8dbf88066fa471e17e1dec4741f344c00713e127",
+      "maxCredits": 50,
+      "policy": "high-value-leads-only"
+    },
+    "unifi": {
+      "apiKey": "fp-3H4VpSG2tT6no6J93O9IyVkdrew9R",
+      "baseUrl": "https://api.ui.com",
+      "sites": 7
+    },
+    "elevated": {
+      "enabled": true,
+      "allowFrom": {
+        "telegram": [
+          "6824992387"
+        ]
+      }
+    },
+    "fs": {
+      "workspaceOnly": true
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "bash": true,
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "token": "hooks_CoIGTQWwh5VxOxZU1vgq70mp9xBuAy7h"
+  },
+  "gateway": {
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {},
+    "auth": {
+      "mode": "token",
+      "token": "CoIGTQWwh5VxOxZU1vgq70mp9xBuAy7h",
+      "rateLimit": {
+        "maxAttempts": 10,
+        "windowMs": 60000,
+        "lockoutMs": 300000
+      }
+    },
+    "remote": {
+      "token": "CoIGTQWwh5VxOxZU1vgq70mp9xBuAy7h"
+    }
+  }
+}

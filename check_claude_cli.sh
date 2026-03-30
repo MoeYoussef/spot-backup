@@ -8,7 +8,7 @@ ISSUES=""
 declare -A AGENTS
 AGENTS[Spot]="13b3665ed192"
 AGENTS[Bubble]="049a844fd5e3"
-AGENTS[Realtor]="cc035e2011b9"
+AGENTS[Realtor]="44fda691d268"
 
 for NAME in "${!AGENTS[@]}"; do
   CID="${AGENTS[$NAME]}"

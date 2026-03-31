@@ -117,7 +117,7 @@
       },
       "cliBackends": {
         "claude-cli": {
-          "command": "/data/.npm-global/bin/claude"
+          "command": "/data/.npm-global/bin/claude-sub"
         }
       },
       "contextPruning": {
@@ -129,7 +129,7 @@
       },
       "heartbeat": {
         "every": "30m",
-        "model": "anthropic/claude-haiku-4-5"
+        "model": "openai-codex/gpt-5.4"
       },
       "sandbox": {
         "mode": "off"

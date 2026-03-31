@@ -10,7 +10,7 @@ RETENTION_DAYS=30
 GIT_SSH="ssh -i /root/.ssh/github_spot -o StrictHostKeyChecking=accept-new"
 
 SPOT_CONTAINER="13b3665ed192"
-BUBBLE_CONTAINER="049a844fd5e3"
+BUBBLE_CONTAINER="c0847b2cbefb"
 REALTOR_CONTAINER="44fda691d268"
 
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG"; }

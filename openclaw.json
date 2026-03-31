@@ -46,10 +46,10 @@
   },
   "meta": {
     "lastTouchedVersion": "2026.3.13",
-    "lastTouchedAt": "2026-03-28T06:54:46.459Z"
+    "lastTouchedAt": "2026-03-31T03:07:59.290Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-17T23:59:53.285Z",
+    "lastRunAt": "2026-03-31T03:07:41.200Z",
     "lastRunVersion": "2026.3.13",
     "lastRunCommand": "doctor",
     "lastRunMode": "local"
@@ -112,15 +112,12 @@
           "alias": "Claude Haiku 4.5 (CLI)"
         },
         "openai-codex/gpt-5.4": {
-          "alias": "GPT-5.4 (Codex)",
-          "params": {
-            "cacheRetention": "short"
-          }
+          "alias": "GPT-5.4 (Codex)"
         }
       },
       "cliBackends": {
         "claude-cli": {
-          "command": "/data/.npm-global/bin/claude-sub"
+          "command": "/data/.npm-global/bin/claude"
         }
       },
       "contextPruning": {
@@ -132,7 +129,7 @@
       },
       "heartbeat": {
         "every": "30m",
-        "model": "claude-cli/claude-haiku-4-5"
+        "model": "anthropic/claude-haiku-4-5"
       },
       "sandbox": {
         "mode": "off"
@@ -151,16 +148,6 @@
         "provider": "brave",
         "apiKey": "BSACwipxFyEcMKA1vUy_OwMamXHd3FX"
       }
-    },
-    "hunter": {
-      "apiKey": "8dbf88066fa471e17e1dec4741f344c00713e127",
-      "maxCredits": 50,
-      "policy": "high-value-leads-only"
-    },
-    "unifi": {
-      "apiKey": "fp-3H4VpSG2tT6no6J93O9IyVkdrew9R",
-      "baseUrl": "https://api.ui.com",
-      "sites": 7
     },
     "elevated": {
       "enabled": true,

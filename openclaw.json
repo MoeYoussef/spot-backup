@@ -72,9 +72,9 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "claude-cli/claude-sonnet-4-6",
+        "primary": "openai-codex/gpt-5.4",
         "fallbacks": [
-          "openai-codex/gpt-5.4",
+          "claude-cli/claude-sonnet-4-6",
           "anthropic/claude-sonnet-4-6"
         ]
       },

@@ -6,31 +6,49 @@
       "telegram",
       "slack",
       "nostr",
-      "googlechat"
+      "googlechat",
+      "browser"
     ],
     "entries": {
       "whatsapp": {
-        "enabled": true
+        "enabled": true,
+        "config": {}
       },
       "discord": {
-        "enabled": true
+        "enabled": true,
+        "config": {}
       },
       "imessage": {
         "enabled": false
       },
       "telegram": {
-        "enabled": true
+        "enabled": true,
+        "config": {}
       },
       "slack": {
-        "enabled": true
+        "enabled": true,
+        "config": {}
       },
       "nostr": {
-        "enabled": true
+        "enabled": true,
+        "config": {}
       },
       "signal": {
         "enabled": false
       },
       "googlechat": {
+        "enabled": true,
+        "config": {}
+      },
+      "brave": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "BSACwipxFyEcMKA1vUy_OwMamXHd3FX"
+          }
+        }
+      },
+      "browser": {
         "enabled": true
       }
     }
@@ -45,8 +63,8 @@
     }
   },
   "meta": {
-    "lastTouchedVersion": "2026.3.13",
-    "lastTouchedAt": "2026-03-31T03:07:59.290Z"
+    "lastTouchedVersion": "2026.3.31",
+    "lastTouchedAt": "2026-03-31T22:29:21.076Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-31T03:07:41.200Z",
@@ -59,7 +77,13 @@
   },
   "update": {
     "channel": "stable",
-    "checkOnStart": false
+    "checkOnStart": true,
+    "auto": {
+      "enabled": true,
+      "stableDelayHours": 6,
+      "stableJitterHours": 12,
+      "betaCheckIntervalHours": 1
+    }
   },
   "browser": {
     "headless": true,
@@ -80,22 +104,13 @@
       },
       "models": {
         "anthropic/claude-opus-4-6": {
-          "alias": "Claude Opus 4.6",
-          "params": {
-            "cacheRetention": "short"
-          }
+          "alias": "Claude Opus 4.6"
         },
         "anthropic/claude-sonnet-4-6": {
-          "alias": "Claude Sonnet 4.6",
-          "params": {
-            "cacheRetention": "short"
-          }
+          "alias": "Claude Sonnet 4.6"
         },
         "anthropic/claude-haiku-4-5": {
-          "alias": "Claude Haiku 4.5",
-          "params": {
-            "cacheRetention": "short"
-          }
+          "alias": "Claude Haiku 4.5"
         },
         "anthropic/Claude Opus 4.6": {
           "params": {
@@ -129,7 +144,7 @@
       },
       "heartbeat": {
         "every": "30m",
-        "model": "openai-codex/gpt-5.4"
+        "model": "anthropic/claude-haiku-4-5"
       },
       "sandbox": {
         "mode": "off"
@@ -145,20 +160,31 @@
   "tools": {
     "web": {
       "search": {
-        "provider": "brave",
-        "apiKey": "BSACwipxFyEcMKA1vUy_OwMamXHd3FX"
+        "provider": "brave"
       }
     },
     "elevated": {
       "enabled": true,
       "allowFrom": {
         "telegram": [
-          "6824992387"
+          6824992387
         ]
       }
     },
     "fs": {
       "workspaceOnly": true
+    },
+    "exec": {
+      "host": "gateway",
+      "security": "full",
+      "ask": "off",
+      "safeBins": [
+        "ssh",
+        "docker",
+        "grep",
+        "sed",
+        "find"
+      ]
     }
   },
   "commands": {
@@ -189,6 +215,11 @@
     },
     "remote": {
       "token": "CoIGTQWwh5VxOxZU1vgq70mp9xBuAy7h"
+    }
+  },
+  "approvals": {
+    "exec": {
+      "enabled": false
     }
   }
 }
